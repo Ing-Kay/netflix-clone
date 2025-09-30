@@ -14,14 +14,6 @@
   <p align="center">Home Page</p>
 </div>
 
-# **Youtube Video for step by step Demonstration!**
-[![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
-
-
-## Susbcribe:
-[https://www.youtube.com/@cloudchamp?
-](https://www.youtube.com/@cloudchamp?sub_confirmation=1)
-
 # Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
 
 ### **Phase 1: Initial Setup and Deployment**
@@ -37,7 +29,7 @@
 - Clone your application's code repository onto the EC2 instance:
     
     ```bash
-    git clone https://github.com/N4si/DevSecOps-Project.git
+    git clone https://github.com/Ing-Kay/netflix-clone.git
     ```
     
 
@@ -57,12 +49,12 @@
 - Build and run your application using Docker containers:
     
     ```bash
-    docker build -t netflix .
-    docker run -d --name netflix -p 8081:80 netflix:latest
+    docker build -t netflix-clone .
+    docker run -d --name netflix -p 8080:80 netflix:latest
     
     #to delete
     docker stop <containerid>
-    docker rmi -f netflix
+    docker rmi -f netflix-clone
     ```
 
 It will show an error cause you need API key
@@ -79,7 +71,7 @@ It will show an error cause you need API key
 
 Now recreate the Docker image with your api key:
 ```
-docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix .
+docker build --build-arg TMDB_V3_API_KEY=<your-api-key> -t netflix-clone .
 ```
 
 **Phase 2: Security**
