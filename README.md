@@ -29,7 +29,7 @@
 - Clone your application's code repository onto the EC2 instance:
     
     ```bash
-    git clone https://github.com/Ing-Kay/netflix-clone.git
+    git clone https://github.com/Ing-Kay/netflix-app.git
     ```
     
 
